@@ -41,10 +41,9 @@ class MeanShift:
 
                 # Draw it on image
                 x,y,w,h = track_window
-                img2 = cv2.rectangle(frame, (x,y), (x+w,y+h), 255,2)
+                img2 = cv2.rectangle(frame, (x,y), (x+w,y+h),(0,0,255),6)
                 cv2.imshow('img2',img2)
-                print(os.listdir("/home/jan/Projects/ObjectTracking/output")) 
-                cv2.imwrite("/home/jan/Projects/ObjectTracking/output/"+str(count)+".jpg",img2)
+                cv2.imwrite("./ObjectTracking/output/"+str(count)+".jpg",img2)
                 print(os.listdir("/home/jan/Projects/ObjectTracking/output")) 
 
                 k = cv2.waitKey(60) & 0xff

@@ -1,5 +1,4 @@
 import cv2
-import cv2.cv2 as cv
 import MeanShift
 
 box = [(0,0),(0,0)]
@@ -14,9 +13,9 @@ def on_mouse(event, x, y, flags, param):
         box[1] = ((x, y))
 
 
-
-color = (255, 0, 0)
-video_cap = cv2.VideoCapture('/home/jan/Projects/ObjectTracking/data/cars.mp4')
+ 
+color = (0, 0, 255)
+video_cap = cv2.VideoCapture("./ObjectTracking/data/cars.mp4")
 ret, frame = video_cap.read()
 while(1):
     cv2.namedWindow('video frame')
@@ -33,7 +32,7 @@ while(1):
     else:
         print(k)
 
-    frame = cv2.rectangle(frame, box[0], box[1], color, 2)
+    frame = cv2.rectangle(frame, box[0], box[1], color, 6)
 
 if(box):
     x,y,w,h = box[0][0],box[0][1],abs(box[0][0]-box[1][0]),abs(box[0][1]-box[1][1])
