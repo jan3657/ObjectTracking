@@ -30,3 +30,8 @@ make -j6
 ```
 sudo make install
 ```
+
+06 That’s it. If you did not encounter any error then OpenCV is installed successfully on your Linux system. The header files are at the location 
+```
+/usr/local/include/opencv4
+```
