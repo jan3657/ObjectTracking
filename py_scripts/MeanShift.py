@@ -43,8 +43,8 @@ class MeanShift:
                 x,y,w,h = track_window
                 img2 = cv2.rectangle(frame, (x,y), (x+w,y+h),(0,0,255),6)
                 cv2.imshow('img2',img2)
-                cv2.imwrite("./ObjectTracking/output/"+str(count)+".jpg",img2)
-                print(os.listdir("/home/jan/Projects/ObjectTracking/output")) 
+                #cv2.imwrite("../output/cars"+str(count)+".jpg",img2)
+                #print(os.listdir("/home/jan/Projects/ObjectTracking/output")) 
 
                 k = cv2.waitKey(60) & 0xff
                 if k == 27:
