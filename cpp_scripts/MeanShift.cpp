@@ -2,6 +2,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include "MeanShift.h"
+#include <time.h>
 using namespace cv;
 
 class MeanShift{
@@ -15,6 +16,10 @@ class MeanShift{
 
     public:
         void track(){
+            double fps = capture.get(CAP_PROP_FPS);
+            clock_t start;
+            clock_t end;
+            double ms, fpsLive;
         if (!this->capture.isOpened()){
         //error in opening the video input
         std::cout << "Unable to open file!" << std::endl;
@@ -25,8 +30,6 @@ class MeanShift{
             Mat frame, roi, hsv_roi, mask;
             this->capture >> frame;
             
-            //Rect track_window(896, 297, 212, 166); //Hardcoded coordinates for tracking
-
             // set up the ROI for tracking
             roi = frame(this->track_window);
             cvtColor(roi, hsv_roi, COLOR_BGR2HSV);
@@ -42,8 +45,10 @@ class MeanShift{
             TermCriteria term_crit(TermCriteria::EPS | TermCriteria::COUNT, 10, 1);
 
             while(true){
+                start = clock();
                 Mat hsv, dst;
                 this->capture >> frame;
+
                 if (frame.empty())
                     break;
                 cvtColor(frame, hsv, COLOR_BGR2HSV);
@@ -52,7 +57,14 @@ class MeanShift{
                 meanShift(dst, this->track_window, term_crit);
                 // Draw it on image
                 rectangle(frame, this->track_window, Scalar(0,0,255), 4);
-                imshow("img2", frame);
+                //FPS COUNTER
+                end = clock();
+                double seconds =  (double(end) - double(start)) / double(CLOCKS_PER_SEC);
+                fpsLive = double(1) / double(seconds);
+                putText(frame, "FPS: " + std::to_string(int(fpsLive)), { 50, 50 }, FONT_HERSHEY_SIMPLEX, 1.5,2);
+                
+                //show img
+                imshow("img", frame);
                 int keyboard = waitKey(30);
                 if (keyboard == 'q' || keyboard == 27)
                     break;
