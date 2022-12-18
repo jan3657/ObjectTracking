@@ -43,14 +43,28 @@ sudo make install
 
 ```
 lspci | grep -i nvidia
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/12.0.0/local_installers/cuda-repo-ubuntu1804-12-0-local_12.0.0-525.60.13-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804-12-0-local_12.0.0-525.60.13-1_amd64.deb
+sudo cp /var/cuda-repo-ubuntu1804-12-0-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda
 ```
 02 Install CUDA toolkit from Ubuntu Repository
 ```
 sudo apt install nvidia-cuda-toolkit
 ```
-03 All should be ready now. Check your CUDA version:
+03 Reboot the system to load the NVIDIA drivers:
 ```
 nvcc --version
+```
+04 Set up the development environment by modifying the PATH and LD_LIBRARY_PATH variables:
+```
+export PATH=/usr/local/cuda-12.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.0/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 <h2>Cuda Toolkit installation guide</h2>
 
