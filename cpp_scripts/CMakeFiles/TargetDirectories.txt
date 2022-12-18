@@ -1,0 +1,3 @@
+/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles/Main.dir
+/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles/edit_cache.dir
+/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles/rebuild_cache.dir

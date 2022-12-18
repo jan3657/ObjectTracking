@@ -5,14 +5,12 @@
 
 using namespace cv;
 
-class MeanShift{
-    Rect track_window; 
+class CamShift{
     Mat frame, roi, hsv_roi, mask, roi_hist;
-       
+    Rect track_window;    
     
     public:   
-    
-    MeanShift(Rect track_window) {
+    CamShift(Rect track_window) {
         this->track_window = track_window;
     }
 
@@ -46,10 +44,7 @@ class MeanShift{
     }
 
     Rect getTrackWindow(){
-        //Point2f points[] = {Point2f(track_window.x,track_window.y), Point2f(track_window.x,track_window.y + track_window.height),
-        //Point2f(track_window.x + track_window.width,track_window.y),Point2f(track_window.x + track_window.width,track_window.y+ track_window.height)};
-        
-        return(track_window);
+        return track_window;
     }
         
 };

@@ -15,7 +15,7 @@ def on_mouse(event, x, y, flags, param):
 
  
 color = (0, 0, 255)
-video_cap = cv2.VideoCapture("./ObjectTracking/data/cars.mp4")
+video_cap = cv2.VideoCapture("../data/cars.mp4")
 ret, frame = video_cap.read()
 while(1):
     cv2.namedWindow('video frame')
