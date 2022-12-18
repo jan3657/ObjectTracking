@@ -38,6 +38,7 @@ sudo make install
 ```
 
 <h2>Cuda Toolkit installation guide</h2>
+`` https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html ``
 
 01 Verify You Have a CUDA-Capable GPU
 
@@ -46,9 +47,9 @@ lspci | grep -i nvidia
 
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/12.0.0/local_installers/cuda-repo-ubuntu1804-12-0-local_12.0.0-525.60.13-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1804-12-0-local_12.0.0-525.60.13-1_amd64.deb
-sudo cp /var/cuda-repo-ubuntu1804-12-0-local/cuda-*-keyring.gpg /usr/share/keyrings/
+wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda-repo-ubuntu1804-11-8-local_11.8.0-520.61.05-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804-11-8-local_11.8.0-520.61.05-1_amd64.deb
+sudo cp /var/cuda-repo-ubuntu1804-11-8-local/cuda-*-keyring.gpg /usr/share/keyrings/
 sudo apt-get update
 sudo apt-get -y install cuda
 ```
@@ -62,11 +63,12 @@ nvcc --version
 ```
 04 Set up the development environment by modifying the PATH and LD_LIBRARY_PATH variables:
 ```
-export PATH=/usr/local/cuda-12.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-12.0/lib64\
+export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64\
                          ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
-<h2>Cuda Toolkit installation guide</h2>
+<h2> cuDNN installation guide</h2>
+https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html
 
 01 Install zlib
 ```
