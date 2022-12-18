@@ -8,9 +8,10 @@ A repo dedicated to my learning and research of different tracking algorithms
 ```
 sudo apt install -y g++ cmake make git libgtk2.0-dev pkg-config
 ```
-02 Download the source. 
+02 Download the source and contrib
 ```
 git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv_contrib.git
 ```
 03 Once the download is complete, create a temporary build directory, and navigate to it.
 ```
