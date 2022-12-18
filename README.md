@@ -1,8 +1,8 @@
 # ObjectTracking
 A repo dedicated to my learning and research of different tracking algorithms 
 <h2>OpenCV installation guide</h2>
-00 This is installation guide for linux. Before you start the installation make sure you are not in a conda env. (That will cause problems).  
-
+This is installation guide for Ubuntu (tested on 20.04). Before you start the installation make sure you are not in a conda env. (That will cause problems).  
+<p> </p>
 01 Installing required packages and tools
 
 ```
@@ -35,4 +35,85 @@ sudo make install
 06 That’s it. If you did not encounter any error then OpenCV is installed successfully on your Linux system. The header files are at the location 
 ```
 /usr/local/include/opencv4
+```
+
+<h2>Cuda Toolkit installation guide</h2>
+
+01 Verify You Have a CUDA-Capable GPU
+
+```
+lspci | grep -i nvidia
+```
+02 Install CUDA toolkit from Ubuntu Repository
+```
+sudo apt install nvidia-cuda-toolkit
+```
+03 All should be ready now. Check your CUDA version:
+```
+nvcc --version
+```
+<h2>Cuda Toolkit installation guide</h2>
+
+01 Install zlib
+```
+sudo apt-get install zlib1g
+```
+02 Download cuDNN from Nvidia website. You need to register for a free account.
+```
+https://developer.nvidia.com/rdp/cudnn-download
+```
+
+03 Navigate to your "cudnnpath" directory containing the cuDNN Debian local installer file.
+
+04 Enable the local repository.
+```
+sudo dpkg -i cudnn-local-repo-${OS}-8.x.x.x_1.0-1_amd64.deb
+```
+
+Import the CUDA GPG key.
+```
+sudo cp /var/cudnn-local-repo-*/cudnn-local-*-keyring.gpg /usr/share/keyrings/
+```
+
+Refresh the repository metadata.
+```
+sudo apt-get update
+```
+
+Install the runtime library.
+```
+sudo apt-get install libcudnn8=8.x.x.x-1+cudaX.Y
+```
+
+Install the developer library.
+```
+sudo apt-get install libcudnn8-dev=8.x.x.x-1+cudaX.Y
+```
+
+Install the code samples and the cuDNN library documentation.
+```
+sudo apt-get install libcudnn8-samples=8.x.x.x-1+cudaX.Y
+```
+To verify that cuDNN is installed and is running properly, compile the mnistCUDNN sample located in the /usr/src/cudnn_samples_v8 directory in the Debian file.
+```
+cp -r /usr/src/cudnn_samples_v8/ $HOME
+```
+
+Go to the writable path.
+```
+cd  $HOME/cudnn_samples_v8/mnistCUDNN
+```
+Compile the mnistCUDNN sample.
+```
+make clean && make
+```
+
+Run the mnistCUDNN sample.
+```
+./mnistCUDNN
+```
+
+If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following:
+```
+Test passed!
 ```
