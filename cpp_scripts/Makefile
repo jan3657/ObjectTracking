@@ -129,29 +129,29 @@ Main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
-CamShift.o: CamShift.cpp.o
-.PHONY : CamShift.o
+CamShiftImp.o: CamShiftImp.cpp.o
+.PHONY : CamShiftImp.o
 
 # target to build an object file
-CamShift.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShift.cpp.o
-.PHONY : CamShift.cpp.o
+CamShiftImp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShiftImp.cpp.o
+.PHONY : CamShiftImp.cpp.o
 
-CamShift.i: CamShift.cpp.i
-.PHONY : CamShift.i
+CamShiftImp.i: CamShiftImp.cpp.i
+.PHONY : CamShiftImp.i
 
 # target to preprocess a source file
-CamShift.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShift.cpp.i
-.PHONY : CamShift.cpp.i
+CamShiftImp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShiftImp.cpp.i
+.PHONY : CamShiftImp.cpp.i
 
-CamShift.s: CamShift.cpp.s
-.PHONY : CamShift.s
+CamShiftImp.s: CamShiftImp.cpp.s
+.PHONY : CamShiftImp.s
 
 # target to generate assembly for a file
-CamShift.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShift.cpp.s
-.PHONY : CamShift.cpp.s
+CamShiftImp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShiftImp.cpp.s
+.PHONY : CamShiftImp.cpp.s
 
 Main.o: Main.cpp.o
 .PHONY : Main.o
@@ -177,29 +177,29 @@ Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
-MeanShift.o: MeanShift.cpp.o
-.PHONY : MeanShift.o
+MeanShiftImp.o: MeanShiftImp.cpp.o
+.PHONY : MeanShiftImp.o
 
 # target to build an object file
-MeanShift.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShift.cpp.o
-.PHONY : MeanShift.cpp.o
+MeanShiftImp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShiftImp.cpp.o
+.PHONY : MeanShiftImp.cpp.o
 
-MeanShift.i: MeanShift.cpp.i
-.PHONY : MeanShift.i
+MeanShiftImp.i: MeanShiftImp.cpp.i
+.PHONY : MeanShiftImp.i
 
 # target to preprocess a source file
-MeanShift.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShift.cpp.i
-.PHONY : MeanShift.cpp.i
+MeanShiftImp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShiftImp.cpp.i
+.PHONY : MeanShiftImp.cpp.i
 
-MeanShift.s: MeanShift.cpp.s
-.PHONY : MeanShift.s
+MeanShiftImp.s: MeanShiftImp.cpp.s
+.PHONY : MeanShiftImp.s
 
 # target to generate assembly for a file
-MeanShift.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShift.cpp.s
-.PHONY : MeanShift.cpp.s
+MeanShiftImp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShiftImp.cpp.s
+.PHONY : MeanShiftImp.cpp.s
 
 # Help Target
 help:
@@ -210,15 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Main"
-	@echo "... CamShift.o"
-	@echo "... CamShift.i"
-	@echo "... CamShift.s"
+	@echo "... CamShiftImp.o"
+	@echo "... CamShiftImp.i"
+	@echo "... CamShiftImp.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
-	@echo "... MeanShift.o"
-	@echo "... MeanShift.i"
-	@echo "... MeanShift.s"
+	@echo "... MeanShiftImp.o"
+	@echo "... MeanShiftImp.i"
+	@echo "... MeanShiftImp.s"
 .PHONY : help
 
 

@@ -1,5 +1,5 @@
-CMakeFiles/Main.dir/MeanShift.cpp.o: \
-  /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShift.cpp \
+CMakeFiles/Main.dir/CamShiftImp.cpp.o: \
+  /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -542,4 +542,4 @@ CMakeFiles/Main.dir/MeanShift.cpp.o: \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/video.hpp \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/video/tracking.hpp \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/video/background_segm.hpp \
-  /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShift.h
+  /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.h

@@ -1,50 +1,87 @@
 #include <iostream>
-#include "MeanShift.cpp"
+#include <stdio.h>
 #include <vector>
 #include <time.h>
 #include <fstream>
 #include <opencv2/opencv.hpp>
+#include "MeanShiftImp.h"
+#include "CamShiftImp.h"
 
 using namespace cv;
-int main(int argc, char** argv )
+int main(int argc, char* argv[])
 {
+    enum algorithms {
+        mean_shift,
+        cam_shift
+    };
+   
+
     std::ifstream ground_truth_capture;
-    //VideoCapture capture("../data/ants/%08d.jpg" );    
-    //ground_truth_capture = std::ifstream("../data/ants/groundtruth.txt");
-    VideoCapture capture("../data/hand/%08d.jpg" );    
-    ground_truth_capture = std::ifstream("../data/hand/groundtruth.txt");
-    //VideoCapture capture("../data/cars.mp4");
-    //VideoCapture capture(0);
+    VideoCapture capture(0);
+    int number_of_tracking_objects = 1;
     int frame_rate = 300000;
+    algorithms tracking_algorithm = mean_shift;
+
+    for (int i = 0; i < argc; ++i){
+        if(strcmp(argv[i], "-s") == 0 || strcmp(argv[i], "--source") == 0){
+            std::string video_path = argv[i+1] + std::string("/\%08d.jpg");
+            std::string ground_truth_path = argv[i+1] + std::string("/groundtruth.txt");
+            capture = VideoCapture(video_path);
+            ground_truth_capture = std::ifstream(ground_truth_path);
+            
+        }
+
+        else if(strcmp(argv[i], "-n") == 0 || strcmp(argv[i], "--number") == 0){
+            number_of_tracking_objects = std::stoi(argv[i+1]);
+        }
+
+        else if(strcmp(argv[i], "-a") == 0 || strcmp(argv[i], "--algorithm") == 0){
+            std::string value = argv[i+1];
+            static std::unordered_map<std::string, algorithms> const table = { {"mean_shift",algorithms::mean_shift}, {"cam_shift",algorithms::cam_shift} };
+            auto it = table.find(value);
+            if (it != table.end()) {
+                tracking_algorithm = it->second;
+                
+            } else { 
+                std::cout << "You misspelled algorithm name or used unsuported one" << std::endl;
+            }
+        }
+    }
+        
+    //VideoCapture capture("../data/hand/%08d.jpg" );    
+    //ground_truth_capture = std::ifstream("../data/hand/groundtruth.txt");
     
-    std::vector<MeanShift> rectangles; //Vector where we're gonna push rectangles
+    std::vector<MeanShiftImp> mean_shift_trackers; 
+    std::vector<CamShiftImp> cam_shift_trackers;
 
     Mat frame;
     capture >> frame ;
-    //If we don't have the first location, select it manually
-    if (!ground_truth_capture.is_open()){
-        for(int i = 0; i< 3; i++){
+    if (!ground_truth_capture.is_open()){ //If we don't have the first location, select it manually
+        for(int i = 0; i < number_of_tracking_objects; i++){
             Rect2d rect = selectROI("select",frame, false); //select a rectangle 
-            rectangles.push_back(MeanShift(rect)); //add selected rectangle to the array
+            mean_shift_trackers.push_back(MeanShiftImp(rect));
+            cam_shift_trackers.push_back(CamShiftImp(rect));
             destroyWindow("select");
             rectangle(frame, rect, Scalar(0,0,255), 4);
         }
     }
-    
-    
-    
+
     clock_t start;
     clock_t end;
     double ms, fpsLive;
 
     
-
     if (!capture.isOpened())
         std::cout << "Unable to open the video" << std::endl; //Error opening the video
 
     
     else{
-        std::cout << "Tracking" << std::endl;
+        if(tracking_algorithm == mean_shift){
+            std::cout << "Tracking with : mean_shift" << std::endl;
+        }else if (tracking_algorithm == cam_shift){
+            std::cout << "Tracking with : cam_shift" << std::endl;
+        }
+            
         std::string line; 
         bool first = true;
         while(!frame.empty()){
@@ -61,7 +98,8 @@ int main(int argc, char** argv )
                 Rect ground_truth_rect = Rect(ground_truth_coordinates[0],ground_truth_coordinates[1],ground_truth_coordinates[2],ground_truth_coordinates[3]);
                 rectangle(frame, ground_truth_rect, Scalar(0,255,0), 4);
                 if(first){
-                    rectangles.push_back(MeanShift(ground_truth_rect));
+                    cam_shift_trackers.push_back(CamShiftImp(ground_truth_rect));
+                    mean_shift_trackers.push_back(MeanShiftImp(ground_truth_rect));
                     imshow("tracking", frame);
                     waitKey(0);
                     first = false;
@@ -70,18 +108,22 @@ int main(int argc, char** argv )
             
             start = clock(); 
 
-            
+            if (tracking_algorithm == algorithms::mean_shift){
+                for(auto & elem : mean_shift_trackers){  
+                    elem.setFrame(frame);
+                    elem.track();
+                    rectangle(frame, elem.getTrackWindow(), Scalar(0,0,255), 4);
+                }
 
-            for(auto & elem : rectangles)
-            {  
-                elem.setFrame(frame);
-                elem.track();
-                rectangle(frame, elem.getTrackWindow(), Scalar(0,0,255), 4);
-
-                //Point2f* points = elem.getTrackWindow();
-                //for (int i = 0; i < 4; i++)
-                //    line(frame, points[i], points[i+1%4] , 255, 2);
             }
+            else if (tracking_algorithm == algorithms::cam_shift){
+                for(auto & elem : cam_shift_trackers){  
+                    elem.setFrame(frame);
+                    elem.track();
+                    rectangle(frame, elem.getTrackWindow(), Scalar(0,0,255), 4);
+                }
+            }
+            
 
             //FPS COUNTER
             do{

@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShift.cpp" "CMakeFiles/Main.dir/CamShift.cpp.o" "gcc" "CMakeFiles/Main.dir/CamShift.cpp.o.d"
+  "/Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp" "CMakeFiles/Main.dir/CamShiftImp.cpp.o" "gcc" "CMakeFiles/Main.dir/CamShiftImp.cpp.o.d"
   "/Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp" "CMakeFiles/Main.dir/Main.cpp.o" "gcc" "CMakeFiles/Main.dir/Main.cpp.o.d"
-  "/Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShift.cpp" "CMakeFiles/Main.dir/MeanShift.cpp.o" "gcc" "CMakeFiles/Main.dir/MeanShift.cpp.o.d"
+  "/Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShiftImp.cpp" "CMakeFiles/Main.dir/MeanShiftImp.cpp.o" "gcc" "CMakeFiles/Main.dir/MeanShiftImp.cpp.o.d"
   )
 
 # Targets to which this target links.

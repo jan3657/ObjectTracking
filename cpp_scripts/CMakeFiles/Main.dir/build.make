@@ -73,56 +73,56 @@ CMakeFiles/Main.dir/Main.cpp.o: CMakeFiles/Main.dir/flags.make
 CMakeFiles/Main.dir/Main.cpp.o: Main.cpp
 CMakeFiles/Main.dir/Main.cpp.o: CMakeFiles/Main.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Main.dir/Main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Main.dir/Main.cpp.o -MF CMakeFiles/Main.dir/Main.cpp.o.d -o CMakeFiles/Main.dir/Main.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Main.dir/Main.cpp.o -MF CMakeFiles/Main.dir/Main.cpp.o.d -o CMakeFiles/Main.dir/Main.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp
 
 CMakeFiles/Main.dir/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/Main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp > CMakeFiles/Main.dir/Main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp > CMakeFiles/Main.dir/Main.cpp.i
 
 CMakeFiles/Main.dir/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/Main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp -o CMakeFiles/Main.dir/Main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp -o CMakeFiles/Main.dir/Main.cpp.s
 
-CMakeFiles/Main.dir/MeanShift.cpp.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/MeanShift.cpp.o: MeanShift.cpp
-CMakeFiles/Main.dir/MeanShift.cpp.o: CMakeFiles/Main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/MeanShift.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Main.dir/MeanShift.cpp.o -MF CMakeFiles/Main.dir/MeanShift.cpp.o.d -o CMakeFiles/Main.dir/MeanShift.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShift.cpp
+CMakeFiles/Main.dir/MeanShiftImp.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/MeanShiftImp.cpp.o: MeanShiftImp.cpp
+CMakeFiles/Main.dir/MeanShiftImp.cpp.o: CMakeFiles/Main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Main.dir/MeanShiftImp.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Main.dir/MeanShiftImp.cpp.o -MF CMakeFiles/Main.dir/MeanShiftImp.cpp.o.d -o CMakeFiles/Main.dir/MeanShiftImp.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShiftImp.cpp
 
-CMakeFiles/Main.dir/MeanShift.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/MeanShift.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShift.cpp > CMakeFiles/Main.dir/MeanShift.cpp.i
+CMakeFiles/Main.dir/MeanShiftImp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/MeanShiftImp.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShiftImp.cpp > CMakeFiles/Main.dir/MeanShiftImp.cpp.i
 
-CMakeFiles/Main.dir/MeanShift.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/MeanShift.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShift.cpp -o CMakeFiles/Main.dir/MeanShift.cpp.s
+CMakeFiles/Main.dir/MeanShiftImp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/MeanShiftImp.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShiftImp.cpp -o CMakeFiles/Main.dir/MeanShiftImp.cpp.s
 
-CMakeFiles/Main.dir/CamShift.cpp.o: CMakeFiles/Main.dir/flags.make
-CMakeFiles/Main.dir/CamShift.cpp.o: CamShift.cpp
-CMakeFiles/Main.dir/CamShift.cpp.o: CMakeFiles/Main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/CamShift.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Main.dir/CamShift.cpp.o -MF CMakeFiles/Main.dir/CamShift.cpp.o.d -o CMakeFiles/Main.dir/CamShift.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShift.cpp
+CMakeFiles/Main.dir/CamShiftImp.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/CamShiftImp.cpp.o: CamShiftImp.cpp
+CMakeFiles/Main.dir/CamShiftImp.cpp.o: CMakeFiles/Main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Main.dir/CamShiftImp.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Main.dir/CamShiftImp.cpp.o -MF CMakeFiles/Main.dir/CamShiftImp.cpp.o.d -o CMakeFiles/Main.dir/CamShiftImp.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp
 
-CMakeFiles/Main.dir/CamShift.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/CamShift.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShift.cpp > CMakeFiles/Main.dir/CamShift.cpp.i
+CMakeFiles/Main.dir/CamShiftImp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/CamShiftImp.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp > CMakeFiles/Main.dir/CamShiftImp.cpp.i
 
-CMakeFiles/Main.dir/CamShift.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/CamShift.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShift.cpp -o CMakeFiles/Main.dir/CamShift.cpp.s
+CMakeFiles/Main.dir/CamShiftImp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/CamShiftImp.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp -o CMakeFiles/Main.dir/CamShiftImp.cpp.s
 
 # Object files for target Main
 Main_OBJECTS = \
 "CMakeFiles/Main.dir/Main.cpp.o" \
-"CMakeFiles/Main.dir/MeanShift.cpp.o" \
-"CMakeFiles/Main.dir/CamShift.cpp.o"
+"CMakeFiles/Main.dir/MeanShiftImp.cpp.o" \
+"CMakeFiles/Main.dir/CamShiftImp.cpp.o"
 
 # External object files for target Main
 Main_EXTERNAL_OBJECTS =
 
 Main: CMakeFiles/Main.dir/Main.cpp.o
-Main: CMakeFiles/Main.dir/MeanShift.cpp.o
-Main: CMakeFiles/Main.dir/CamShift.cpp.o
+Main: CMakeFiles/Main.dir/MeanShiftImp.cpp.o
+Main: CMakeFiles/Main.dir/CamShiftImp.cpp.o
 Main: CMakeFiles/Main.dir/build.make
 Main: /usr/local/lib/libopencv_gapi.4.6.0.dylib
 Main: /usr/local/lib/libopencv_stitching.4.6.0.dylib
