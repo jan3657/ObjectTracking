@@ -9,7 +9,6 @@ private:
 
 public:
     CamShiftImp(cv::Rect mTrack_window);
-    void track();
-    void setFrame(cv::Mat mFrame);
+    void track(cv::Mat &img);
     cv::Rect getTrackWindow();
 };

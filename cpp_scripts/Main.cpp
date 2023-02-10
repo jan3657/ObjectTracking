@@ -6,8 +6,10 @@
 #include <opencv2/opencv.hpp>
 #include "MeanShiftImp.h"
 #include "CamShiftImp.h"
+#include "colotracker.h"
 
 using namespace cv;
+ColorTracker *g_tracker = NULL;
 int main(int argc, char* argv[])
 {
     enum algorithms {
@@ -15,9 +17,11 @@ int main(int argc, char* argv[])
         cam_shift
     };
    
-
+    
     std::ifstream ground_truth_capture;
     VideoCapture capture(0);
+    capture.set(CAP_PROP_FRAME_WIDTH, 640);
+    capture.set(CAP_PROP_FRAME_HEIGHT, 480);
     int number_of_tracking_objects = 1;
     int frame_rate = 300000;
     algorithms tracking_algorithm = mean_shift;
@@ -27,6 +31,7 @@ int main(int argc, char* argv[])
             std::string video_path = argv[i+1] + std::string("/\%08d.jpg");
             std::string ground_truth_path = argv[i+1] + std::string("/groundtruth.txt");
             capture = VideoCapture(video_path);
+            
             ground_truth_capture = std::ifstream(ground_truth_path);
             
         }
@@ -50,7 +55,8 @@ int main(int argc, char* argv[])
         
     //VideoCapture capture("../data/hand/%08d.jpg" );    
     //ground_truth_capture = std::ifstream("../data/hand/groundtruth.txt");
-    
+   
+    std::vector<ColorTracker> color_trackers;
     std::vector<MeanShiftImp> mean_shift_trackers; 
     std::vector<CamShiftImp> cam_shift_trackers;
 
@@ -58,9 +64,11 @@ int main(int argc, char* argv[])
     capture >> frame ;
     if (!ground_truth_capture.is_open()){ //If we don't have the first location, select it manually
         for(int i = 0; i < number_of_tracking_objects; i++){
-            Rect2d rect = selectROI("select",frame, false); //select a rectangle 
+            Rect rect = selectROI("select",frame, false); //select a rectangle 
+            g_tracker = new ColorTracker(frame, rect);
             mean_shift_trackers.push_back(MeanShiftImp(rect));
             cam_shift_trackers.push_back(CamShiftImp(rect));
+            color_trackers.push_back(*g_tracker);
             destroyWindow("select");
             rectangle(frame, rect, Scalar(0,0,255), 4);
         }
@@ -76,6 +84,8 @@ int main(int argc, char* argv[])
 
     
     else{
+        
+
         if(tracking_algorithm == mean_shift){
             std::cout << "Tracking with : mean_shift" << std::endl;
         }else if (tracking_algorithm == cam_shift){
@@ -109,17 +119,16 @@ int main(int argc, char* argv[])
             start = clock(); 
 
             if (tracking_algorithm == algorithms::mean_shift){
-                for(auto & elem : mean_shift_trackers){  
-                    elem.setFrame(frame);
-                    elem.track();
-                    rectangle(frame, elem.getTrackWindow(), Scalar(0,0,255), 4);
+                for(auto & elem : color_trackers){  
+                    Rect *rect = g_tracker->track(frame);
+                    rectangle(frame, *rect, Scalar(0,0,255), 4);
                 }
 
             }
             else if (tracking_algorithm == algorithms::cam_shift){
                 for(auto & elem : cam_shift_trackers){  
-                    elem.setFrame(frame);
-                    elem.track();
+                    //elem.setFrame(frame);
+                    elem.track(frame);
                     rectangle(frame, elem.getTrackWindow(), Scalar(0,0,255), 4);
                 }
             }

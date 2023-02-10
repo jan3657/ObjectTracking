@@ -8,9 +8,9 @@ CamShiftImp::CamShiftImp(Rect track_window) {
     this->mTrack_window = track_window;
 }
 
-void CamShiftImp::track(){     
+void CamShiftImp::track(Mat &img){
     // set up the ROI for tracking
-    mRoi = mFrame(mTrack_window);
+    mRoi = img(mTrack_window);
     cvtColor(mRoi, mHsv_roi, COLOR_BGR2HSV);
     inRange(mHsv_roi, Scalar(0, 60, 32), Scalar(180, 255, 255), mMask);
     float range_[] = {0, 180};
@@ -23,15 +23,12 @@ void CamShiftImp::track(){
     TermCriteria term_crit(TermCriteria::EPS | TermCriteria::COUNT, 10, 1);
 
     Mat mHsv, mDst;
-    cvtColor(mFrame, mHsv, COLOR_BGR2HSV);
+    cvtColor(img, mHsv, COLOR_BGR2HSV);
     calcBackProject(&mHsv, 1, channels, roi_hist, mDst, range);
     //apply camshift to get the new location
     RotatedRect rot_rect = cv::CamShift(mDst, mTrack_window, term_crit);
 }
 
-void CamShiftImp::setFrame(Mat frame){
-    this->mFrame = frame;
-}
 
 Rect CamShiftImp::getTrackWindow(){
     return mTrack_window;

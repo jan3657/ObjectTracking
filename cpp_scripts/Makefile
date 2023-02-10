@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named color
+
+# Build rule for target.
+color: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color
+.PHONY : color
+
+# fast build rule for target.
+color/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
+.PHONY : color/fast
+
+#=============================================================================
 # Target rules for targets named Main
 
 # Build rule for target.
@@ -134,7 +147,7 @@ CamShiftImp.o: CamShiftImp.cpp.o
 
 # target to build an object file
 CamShiftImp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShiftImp.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/CamShiftImp.cpp.o
 .PHONY : CamShiftImp.cpp.o
 
 CamShiftImp.i: CamShiftImp.cpp.i
@@ -142,7 +155,7 @@ CamShiftImp.i: CamShiftImp.cpp.i
 
 # target to preprocess a source file
 CamShiftImp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShiftImp.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/CamShiftImp.cpp.i
 .PHONY : CamShiftImp.cpp.i
 
 CamShiftImp.s: CamShiftImp.cpp.s
@@ -150,7 +163,7 @@ CamShiftImp.s: CamShiftImp.cpp.s
 
 # target to generate assembly for a file
 CamShiftImp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/CamShiftImp.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/CamShiftImp.cpp.s
 .PHONY : CamShiftImp.cpp.s
 
 Main.o: Main.cpp.o
@@ -182,7 +195,7 @@ MeanShiftImp.o: MeanShiftImp.cpp.o
 
 # target to build an object file
 MeanShiftImp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShiftImp.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/MeanShiftImp.cpp.o
 .PHONY : MeanShiftImp.cpp.o
 
 MeanShiftImp.i: MeanShiftImp.cpp.i
@@ -190,7 +203,7 @@ MeanShiftImp.i: MeanShiftImp.cpp.i
 
 # target to preprocess a source file
 MeanShiftImp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShiftImp.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/MeanShiftImp.cpp.i
 .PHONY : MeanShiftImp.cpp.i
 
 MeanShiftImp.s: MeanShiftImp.cpp.s
@@ -198,8 +211,80 @@ MeanShiftImp.s: MeanShiftImp.cpp.s
 
 # target to generate assembly for a file
 MeanShiftImp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/MeanShiftImp.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/MeanShiftImp.cpp.s
 .PHONY : MeanShiftImp.cpp.s
+
+colotracker.o: colotracker.cpp.o
+.PHONY : colotracker.o
+
+# target to build an object file
+colotracker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/colotracker.cpp.o
+.PHONY : colotracker.cpp.o
+
+colotracker.i: colotracker.cpp.i
+.PHONY : colotracker.i
+
+# target to preprocess a source file
+colotracker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/colotracker.cpp.i
+.PHONY : colotracker.cpp.i
+
+colotracker.s: colotracker.cpp.s
+.PHONY : colotracker.s
+
+# target to generate assembly for a file
+colotracker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/colotracker.cpp.s
+.PHONY : colotracker.cpp.s
+
+histogram.o: histogram.cpp.o
+.PHONY : histogram.o
+
+# target to build an object file
+histogram.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/histogram.cpp.o
+.PHONY : histogram.cpp.o
+
+histogram.i: histogram.cpp.i
+.PHONY : histogram.i
+
+# target to preprocess a source file
+histogram.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/histogram.cpp.i
+.PHONY : histogram.cpp.i
+
+histogram.s: histogram.cpp.s
+.PHONY : histogram.s
+
+# target to generate assembly for a file
+histogram.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/histogram.cpp.s
+.PHONY : histogram.cpp.s
+
+region.o: region.cpp.o
+.PHONY : region.o
+
+# target to build an object file
+region.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/region.cpp.o
+.PHONY : region.cpp.o
+
+region.i: region.cpp.i
+.PHONY : region.i
+
+# target to preprocess a source file
+region.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/region.cpp.i
+.PHONY : region.cpp.i
+
+region.s: region.cpp.s
+.PHONY : region.s
+
+# target to generate assembly for a file
+region.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/region.cpp.s
+.PHONY : region.cpp.s
 
 # Help Target
 help:
@@ -210,6 +295,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Main"
+	@echo "... color"
 	@echo "... CamShiftImp.o"
 	@echo "... CamShiftImp.i"
 	@echo "... CamShiftImp.s"
@@ -219,6 +305,15 @@ help:
 	@echo "... MeanShiftImp.o"
 	@echo "... MeanShiftImp.i"
 	@echo "... MeanShiftImp.s"
+	@echo "... colotracker.o"
+	@echo "... colotracker.i"
+	@echo "... colotracker.s"
+	@echo "... histogram.o"
+	@echo "... histogram.i"
+	@echo "... histogram.s"
+	@echo "... region.o"
+	@echo "... region.i"
+	@echo "... region.s"
 .PHONY : help
 
 

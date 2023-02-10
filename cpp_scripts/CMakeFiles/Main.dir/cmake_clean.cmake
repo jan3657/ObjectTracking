@@ -1,10 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Main.dir/CamShiftImp.cpp.o"
-  "CMakeFiles/Main.dir/CamShiftImp.cpp.o.d"
   "CMakeFiles/Main.dir/Main.cpp.o"
   "CMakeFiles/Main.dir/Main.cpp.o.d"
-  "CMakeFiles/Main.dir/MeanShiftImp.cpp.o"
-  "CMakeFiles/Main.dir/MeanShiftImp.cpp.o.d"
   "Main"
   "Main.pdb"
 )
