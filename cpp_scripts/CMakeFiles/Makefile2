@@ -83,12 +83,12 @@ clean: CMakeFiles/Main.dir/clean
 CMakeFiles/color.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target color"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles --progress-num=3,4,5,6,7 "Built target color"
 .PHONY : CMakeFiles/color.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/color.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles 0
 .PHONY : CMakeFiles/color.dir/rule
@@ -114,7 +114,7 @@ CMakeFiles/Main.dir/all: CMakeFiles/color.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jandrole/projects/ObjectTracking/cpp_scripts/CMakeFiles 0
 .PHONY : CMakeFiles/Main.dir/rule

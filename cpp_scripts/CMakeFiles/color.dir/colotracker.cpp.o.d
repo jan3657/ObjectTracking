@@ -544,7 +544,6 @@ CMakeFiles/color.dir/colotracker.cpp.o: \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/video/tracking.hpp \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/video/background_segm.hpp \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/highgui/highgui.hpp \
-  /Users/jandrole/projects/ObjectTracking/cpp_scripts/region.h \
   /Users/jandrole/projects/ObjectTracking/cpp_scripts/histogram.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream \

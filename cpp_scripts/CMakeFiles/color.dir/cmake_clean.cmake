@@ -7,8 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/color.dir/colotracker.cpp.o.d"
   "CMakeFiles/color.dir/histogram.cpp.o"
   "CMakeFiles/color.dir/histogram.cpp.o.d"
-  "CMakeFiles/color.dir/region.cpp.o"
-  "CMakeFiles/color.dir/region.cpp.o.d"
   "libcolor.a"
   "libcolor.pdb"
 )

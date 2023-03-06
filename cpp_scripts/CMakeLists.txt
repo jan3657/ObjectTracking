@@ -11,7 +11,7 @@ find_package( OpenCV REQUIRED )
 link_directories ( ${OpenCV_LIB_DIR} )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-set(COLOR_LIB_SRC colotracker.cpp histogram.cpp region.cpp MeanShiftImp.cpp CamShiftImp.cpp )
+set(COLOR_LIB_SRC colotracker.cpp histogram.cpp MeanShiftImp.cpp CamShiftImp.cpp )
 
 add_library(color STATIC ${COLOR_LIB_SRC})
 target_link_libraries(color ${OpenCV_LIBS})

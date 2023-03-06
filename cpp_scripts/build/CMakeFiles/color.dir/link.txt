@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcolor.a CMakeFiles/color.dir/colotracker.cpp.o CMakeFiles/color.dir/histogram.cpp.o CMakeFiles/color.dir/MeanShiftImp.cpp.o CMakeFiles/color.dir/CamShiftImp.cpp.o
+/usr/bin/ranlib libcolor.a

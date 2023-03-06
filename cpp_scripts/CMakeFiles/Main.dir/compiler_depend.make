@@ -551,14 +551,11 @@ CMakeFiles/Main.dir/Main.cpp.o: Main.cpp \
   CamShiftImp.h \
   colotracker.h \
   /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/highgui/highgui.hpp \
-  region.h \
   histogram.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric
 
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/numeric:
-
-region.h:
 
 /usr/local/Cellar/opencv/4.6.0_1/include/opencv4/opencv2/highgui/highgui.hpp:
 

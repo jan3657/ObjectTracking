@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.6.0_1/include/opencv4  -Wall -O3 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -std=gnu++11 -o CMakeFiles/color.dir/colotracker.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/colotracker.cpp",
+  "file": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/colotracker.cpp"
+},
+{
+  "directory": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.6.0_1/include/opencv4  -Wall -O3 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -std=gnu++11 -o CMakeFiles/color.dir/histogram.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/histogram.cpp",
+  "file": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/histogram.cpp"
+},
+{
+  "directory": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.6.0_1/include/opencv4  -Wall -O3 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -std=gnu++11 -o CMakeFiles/color.dir/MeanShiftImp.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShiftImp.cpp",
+  "file": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/MeanShiftImp.cpp"
+},
+{
+  "directory": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.6.0_1/include/opencv4  -Wall -O3 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -std=gnu++11 -o CMakeFiles/color.dir/CamShiftImp.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp",
+  "file": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/CamShiftImp.cpp"
+},
+{
+  "directory": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/build",
+  "command": "/usr/bin/clang++  -isystem /usr/local/Cellar/opencv/4.6.0_1/include/opencv4  -Wall -O3 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -std=gnu++11 -o CMakeFiles/Main.dir/Main.cpp.o -c /Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp",
+  "file": "/Users/jandrole/projects/ObjectTracking/cpp_scripts/Main.cpp"
+}
+]

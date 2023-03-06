@@ -31,7 +31,7 @@ ColorTracker::ColorTracker(cv::Mat & img, cv::Rect mTrack_window){
     b_weights.transformToWeights();
     q_hist.multiplyByWeights(&b_weights);
 
-    lastPosition.setBBox(x1, y1, x2-x1, y2-y1, 1, 1);
+    lastPosition = mTrack_window;
     defaultWidth = x2-x1;
     defaultHeight = y2-y1;
     sumIter = 0;
@@ -101,7 +101,7 @@ void ColorTracker::init(cv::Mat & img, cv::Rect selected)
     b_weights.transformToWeights();
     q_hist.multiplyByWeights(&b_weights);
 
-    lastPosition.setBBox(x1, y1, x2-x1, y2-y1, 1, 1);
+    lastPosition = cv::Rect(x1,y1,x2-x1,y2-y1);
     defaultWidth = x2-x1;
     defaultHeight = y2-y1;
     sumIter = 0;
@@ -502,7 +502,8 @@ cv::Rect *ColorTracker::track(cv::Mat & img, double x1, double y1, double x2, do
         }
     }
     tracking_window = cv::Rect(modeCenter.x - width/2,modeCenter.y - height/2, width,height);
-    cv::Rect * rect = &tracking_window;
+    cv::Rect *rect = &tracking_window;
+    lastPosition = *rect;
     return rect; 
 }
 

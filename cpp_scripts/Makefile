@@ -262,30 +262,6 @@ histogram.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/histogram.cpp.s
 .PHONY : histogram.cpp.s
 
-region.o: region.cpp.o
-.PHONY : region.o
-
-# target to build an object file
-region.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/region.cpp.o
-.PHONY : region.cpp.o
-
-region.i: region.cpp.i
-.PHONY : region.i
-
-# target to preprocess a source file
-region.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/region.cpp.i
-.PHONY : region.cpp.i
-
-region.s: region.cpp.s
-.PHONY : region.s
-
-# target to generate assembly for a file
-region.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color.dir/build.make CMakeFiles/color.dir/region.cpp.s
-.PHONY : region.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -311,9 +287,6 @@ help:
 	@echo "... histogram.o"
 	@echo "... histogram.i"
 	@echo "... histogram.s"
-	@echo "... region.o"
-	@echo "... region.i"
-	@echo "... region.s"
 .PHONY : help
 
 

@@ -2,7 +2,6 @@
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include "region.h"
 #include "histogram.h"
 #include <iostream>
 
@@ -19,7 +18,7 @@ private:
     cv::Rect mTrack_window;
     double total_fps = 0;
     int iterations = 0;
-    BBox lastPosition;
+    cv::Rect lastPosition;
     cv::Rect tracking_window;
     cv::Mat im1;
     cv::Mat im2;
@@ -61,18 +60,7 @@ public:
     void init(cv::Mat & img, cv::Rect selected);
     ColorTracker(cv::Mat & img, cv::Rect mTrack_window);
 
-    // Set last object position - starting position for next tracking step
-    inline void setLastBBox(int x1, int y1, int x2, int y2)
-	{
-        lastPosition.setBBox(x1, y1, x2-x1, y2-y1, 1, 1);
-    }
 
-    inline BBox * getBBox()
-    {
-        BBox * bbox = new BBox();
-        * bbox = lastPosition;
-        return bbox;
-    }
 
 	// frame-to-frame object tracking
     cv::Rect *track(cv::Mat &img, double x1, double y1, double x2, double y2);
